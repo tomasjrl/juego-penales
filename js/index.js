@@ -127,5 +127,11 @@ function reinicioJuego() {
     document.getElementById('jugador-puntaje').innerText = puntajes.jugadorPuntaje;
     document.getElementById('computadora-puntaje').innerText = puntajes.computadoraPuntaje;
     document.getElementById('result').innerHTML = "¡El juego ha finalizado!";
+    
+    // Borra el mensaje después de 500 milisegundos
+    setTimeout(() => {
+        document.getElementById('result').innerHTML = "";
+    }, 1000);
+    
     document.querySelectorAll('.casillero img').forEach(img => img.remove());
 }
